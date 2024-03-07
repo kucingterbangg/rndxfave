@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #f9f1e9;
+            background-image: url(backgroundLogin.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: "Archivo", sans-serif;
+            color: #392A2A;
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        #logo{
+            width: fit-content;
+            height: fit-content;
+            margin-top: 100px;
+        }
+
+        .heading{
+            font-family: "Noto Serif", serif;
+        }
+
+        h1{
+            font-weight: 300;
+            font-size: 160px;
+        }
+
+        .error-message{
+            color: red;
+        }
+
+        .input{
+            border: none;
+            background: none;
+            border-bottom: 2px solid #392A2A;
+            /* width: 80%; */
+            height: 30px;
+            width: 720px;
+        }
+
+        .input::placeholder {
+            font-family: "Archivo", sans-serif;
+            color: #392A2A;
+            font-weight: 500;
+            font-size: 20px;
+            opacity: 50%;
+            font-size: 18px;
+        }
+       
+        #send-btn{
+            border: none;
+            background: #392A2A;
+            font-size: 42px;
+            color: #f9f1e9;
+            padding: 16px;
+            border-radius: 8px;
+            width: 30%;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #send-btn:hover{
+            font-size: 47px;
+        }
+
+        #alamat{
+            border: #392A2A 2px solid;
+            border-radius: 8px;
+            height: 80px;
+        }
+
+        a{
+            color: #392A2A;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        a:hover{
+            font-size: 25px;
+        }
+
+        #top{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 40px;
+        }
+        
+        #bottom{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 130px;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="top">
+        <img id="logo" src="logo.svg" alt="logo">
+        <h1 class="heading">Login</h1><br><br>
+    </div><br><br><br><br>
+    
+    <form id="form" action="">
+        <div>
+            <label for="">Email</label><br><br>
+            <input type="email" id="email" class="input" placeholder="Please enter your email address...">
+            <p id="error-email" class="error-message"></p>
+        </div><br>
+
+        <div>
+            <label for="">Password</label><br><br>
+            <input class="input" type="password" name="" id="password" placeholder="Please enter your password...">
+            <p id="error-password" class="error-message"></p>
+        </div><br><br>
+
+        <button id="send-btn" class="heading" type="submit">Login</button>
+        
+    </form><br><br>
+
+    <div id="bottom">
+        <p>You don't have an account?</p>
+        <a href="">Register here</a>
+    </div>
+    
+
+    <script>
+        function validateEmail() {
+            let inputEmail = document.querySelector("#email");
+            let valueEmail = inputEmail.value;
+            let errorEmail = document.querySelector("#error-email");
+        
+            if (valueEmail == "") {
+            errorEmail.innerHTML = "Email cannot be empty!";
+            inputEmail.style.borderBottom = "2px solid red";
+            inputEmail.placeholder = "";
+            return false;
+            } else if (!valueEmail.endsWith("@gmail.com")) {
+            errorEmail.innerHTML = "Email must contain '@gmail.com'!";
+            inputEmail.style.borderBottom = "2px solid red";
+            return false;
+            } else {
+            errorEmail.innerHTML = "";
+            inputEmail.style.borderBottom = "2px solid #392A2A";
+            return true;
+            }
+        }
+
+        function validatePassword(){
+            let inputPassword = document.querySelector("#password");
+            let valuePassword = inputPassword.value;
+            let errorPassword = document.querySelector("#error-password");
+
+            var hasLowerCase = /[a-z]/.test(valuePassword);
+            var hasUpperCase = /[A-Z]/.test(valuePassword);
+            var hasSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(valuePassword);
+
+            if (valuePassword == "") {
+                errorPassword.innerHTML = "Password cannot be empty!";
+                inputPassword.style.borderBottom = "2px solid red";
+                inputPassword.placeholder = "";
+                return false;
+            } else if(valuePassword.length < 8 || !hasLowerCase || !hasUpperCase || !hasSpecialChar){
+                errorPassword.innerHTML = "Password must be at least 8 characters long and include at least one lowercase character, one uppercase character, and one special character!";
+                inputPassword.style.borderBottom = "2px solid red";
+                return false;
+            } else {
+                errorPassword.innerHTML = "";
+                inputPassword.style.borderBottom = "2px solid #392A2A";
+                return true;
+            }
+        }
+
+        let sendBtn = document.querySelector("#send-btn");
+        sendBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            let form = document.querySelector("#form");
+            let isEmailValid = validateEmail();
+            let isPasswordValid = validatePassword();
+
+            if (isEmailValid&&isPasswordValid) {
+                console.log("submit", form)
+                form.submit();
+            }
+        });
+
+    </script>
+</body>
+</html>
