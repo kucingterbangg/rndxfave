@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="AdminPanel.css"/>
+    <title>XYZ E-Commerce</title>
+</head>
+<body>
+    <header>
+        <img
+            src="./Assets/icon-logo.svg"
+            alt="XYZ E-Commerce Logo"
+        />
+
+        <details>
+            <summary>
+                <img
+                    src="./Assets/icon-profile.svg"
+                    alt="Profile"
+                />
+                <p> Admin </p>               
+            </summary>
+            <button>
+                Logout
+            </button>            
+        </details>
+    </header>
+
+    <main>
+        <button id="button-create">
+            Tambah Produk
+        </button>
+
+        <table>
+            <tr id="table-header">
+                <td width="40%"> Nama Produk </td>
+                <td width="20%"> Harga </td>
+                <td width="20%"> Stok </td>
+                <td width="20%"> Aksi </td>
+            </tr>
+
+            <tbody id="table-products">
+                <!-- Rendered using JavaScript -->
+            </tbody>
+        </table>
+    </main>
+
+    <section id="popup-form">
+        <!-- Rendered using JavaScript -->
+    </section>
+
+    <script src="AdminPanel.js"></script>
+</body>
+</html>
