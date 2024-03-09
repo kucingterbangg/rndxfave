@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link to Google Fonts for Noto Serif -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap">
+    <style>
+        /* CSS untuk gaya h1 */
+        h1 {
+            color: #392A2A; /* Ubah warna tulisan */
+            font-family: 'Noto Serif', serif; /* Gunakan Noto Serif */
+            font-size: 20px; /* Ukuran font */
+            margin: 0px 35px; /* Margin */
+            margin-left: 50px;
+            font-weight: normal; /* Hapus ketebalan tulisan */
+            letter-spacing: 0px;
+        }
+
+        h2 {
+            color: #392A2A; /* Ubah warna tulisan */
+            font-family: 'Noto Serif', serif; /* Gunakan Noto Serif */
+            font-size: 20px; /* Ukuran font */
+            margin: 20px 35px; /* Margin */
+            margin-left: 50px;
+            font-weight: normal; /* Hapus ketebalan tulisan */
+            letter-spacing: 0px;
+            margin-top: 200px; /* Mengubah jarak atas */
+        }
+
+        pre{
+            color: #F9F1E9;
+            font-family: 'Noto Serif', serif;
+            font-size: 30px;
+            font-weight: normal;
+            margin-left: 20px;
+        }
+
+        h3 {
+            color: #F9F1E9; /* Ubah warna tulisan */
+            font-family: 'Noto Serif', serif; /* Gunakan Noto Serif */
+            font-size: 30px; /* Ukuran font */
+            margin-left: 400px;
+            font-weight: normal; /* Hapus ketebalan tulisan */
+            letter-spacing: 0px;
+        }
+
+        h4 {
+            color: #F9F1E9; /* Ubah warna tulisan */
+            font-family: 'Noto Serif', serif; /* Gunakan Noto Serif */
+            font-size: 30px; /* Ukuran font */
+            margin-left: 795px;
+            font-weight: normal; /* Hapus ketebalan tulisan */
+            letter-spacing: 0px;
+            margin-top: 6px;
+        }
+
+        h5 {
+            color: #F9F1E9; /* Ubah warna tulisan */
+            font-family: 'Noto Serif', serif; /* Gunakan Noto Serif */
+            font-size: 30px; /* Ukuran font */
+            margin-left: 795px;
+            font-weight: normal; /* Hapus ketebalan tulisan */
+            letter-spacing: 0px;
+            margin-top: 6px;
+        }
+
+        body {
+            background-color:#F9F1E9; /* Warna latar belakang */
+        }
+
+        .container {
+            display: flex; /* Gunakan tata letak flexbox */
+            justify-content: space-between; /* Posisikan kotak secara merata di sepanjang baris */
+            align-items: flex-start; /* Sejajarkan teks dan kotak secara vertikal ke atas */
+            margin-top: 20px; /* Jarak dari judul */
+            margin-left: 35px; /* Menggeser kontainer ke kanan */
+            margin-right: 35px; /* Menggeser kontainer ke kiri */
+        }
+
+        .box {
+            width: 300px; /* Lebar kotak */
+            height: 400px; /* Tinggi kotak */
+            background-color: none; /* Warna latar belakang kotak */
+            border: 1px solid #392A2A; /* Garis tepi kotak */
+            margin: 0px 15px;
+            border-radius: 8px;
+            margin-top: 1px;
+        }
+
+        .box img {
+            width: 100%; /* Mengisi kotak dengan gambar */
+            height: 100%; /* Mengisi kotak dengan gambar */
+        }
+
+        .product-caption {
+            display: flex; /* Mengaktifkan tata letak flexbox */
+            flex-direction: column; /* Menampilkan elemen dalam satu kolom */
+            align-items: flex-start; /* Sejajarkan elemen secara horizontal ke kiri */
+            margin-top: 0px;
+        }
+
+        .product-caption span {
+            display: flex; /* Mengaktifkan tata letak flexbox */
+            align-items: l; /* Sejajarkan elemen secara vertikal */
+        }
+
+        .product-images {
+            display: flex; /* Mengaktifkan tata letak flexbox */
+            align-items: flex-start; /* Sejajarkan gambar-gambar ke atas */
+        }
+
+        .product-images img {
+            width: 30px; /* Lebar gambar */
+            height: 30px; /* Tinggi gambar */
+            margin-right: 5px; /* Jarak antar gambar */
+            margin-left: -7px; /* Geser gambar ke kiri */
+            margin-top: -12px;
+        }
+
+        .union-image {
+            width: 30px; /* Lebar gambar */
+            height: 150px; /* Tinggi gambar */
+            position: absolute;
+            top: 1300px;
+            left: 50%;
+        }
+
+        footer {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 600px;
+            background-color: #392A2A;
+            color: #F9F1E9;
+            padding: 20px 0;
+            margin-top: 400px;
+            
+        }
+        
+            footer img {
+            width: 50px; /* Lebar gambar */
+            height: 50px; /* Tinggi gambar */
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+
+        .map-link {
+        text-decoration: none; /* Hilangkan underline secara default */
+        color: #F9F1E9; /* Ubah warna teks */
+        }
+
+        .map-link:hover {
+        text-decoration: underline; /* Tampilkan underline saat dihover */
+        }
+
+        .footer-done a:hover {
+        text-decoration: underline;
+    }
+
+        
+      
+    
+    </style>
+</head>
+<body>
+    <h1>Newest Product</h1>
+    <div class="container">
+        <div class="box">
+            <img src="image 1.png" alt="Product 1">
+            <div class="product-caption">
+                <p>High Collar Wool Sweater <span>Rp 1.399.000</span></p>
+                <div class="product-images">
+                    <img src="Ellipse 13.png" alt="Product Image">
+                    <img src="Ellipse 14.png" alt="Product Image">
+                    <img src="Ellipse 15.png" alt="Product Image">
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <img src="image 1 (1).png" alt="Product 2">
+            <div class="product-caption">
+                <p>High Collar Wool Sweater <span>Rp 1.399.000</span></p>
+                <div class="product-images">
+                    <img src="Ellipse 13.png" alt="Product Image">
+                    <img src="Ellipse 14.png" alt="Product Image">
+                    <img src="Ellipse 15.png" alt="Product Image">
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <img src="image 1 (2).png" alt="Product 3">
+            <div class="product-caption">
+                <p>High Collar Wool Sweater <span>Rp 1.399.000</span></p>
+                <div class="product-images">
+                    <img src="Ellipse 13.png" alt="Product Image">
+                    <img src="Ellipse 14.png" alt="Product Image">
+                    <img src="Ellipse 15.png" alt="Product Image">
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <img src="image 1 (3).png" alt="Product 4">
+            <div class="product-caption">
+                <p>High Collar Wool Sweater <span>Rp 1.399.000</span></p>
+                <div class="product-images">
+                    <img src="Ellipse 13.png" alt="Product Image">
+                    <img src="Ellipse 14.png" alt="Product Image">
+                    <img src="Ellipse 15.png" alt="Product Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>Other Product</h2>
+    <div class="container">
+        <div class="box">
+            <img src="image 1 (5).png" alt="Product 1">
+            <div class="product-caption">
+                <p>High Collar Wool Sweater <span>Rp 1.399.000</span></p>
+                <div class="product-images">
+                    <img src="Ellipse 13.png" alt="Product Image">
+                    <img src="Ellipse 14.png" alt="Product Image">
+                    <img src="Ellipse 15.png" alt="Product Image">
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <img src="image 1 (6).png" alt="Product 2">
+            <div class="product-caption">
+                <p>High Collar Wool Sweater <span>Rp 1.399.000</span></p>
+                <div class="product-images">
+                    <img src="Ellipse 13.png" alt="Product Image">
+                    <img src="Ellipse 14.png" alt="Product Image">
+                    <img src="Ellipse 15.png" alt="Product Image">
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <img src="image 1 (7).png" alt="Product 3">
+            <div class="product-caption">
+                <p>High Collar Wool Sweater <span>Rp 1.399.000</span></p>
+                <div class="product-images">
+                    <img src="Ellipse 13.png" alt="Product Image">
+                    <img src="Ellipse 14.png" alt="Product Image">
+                    <img src="Ellipse 15.png" alt="Product Image">
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <img src="image 1 (8).png" alt="Product 4">
+            <div class="product-caption">
+                <p>High Collar Wool Sweater <span>Rp 1.399.000</span></p>
+                <div class="product-images">
+                    <img src="Ellipse 13.png" alt="Product Image">
+                    <img src="Ellipse 14.png" alt="Product Image">
+                    <img src="Ellipse 15.png" alt="Product Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="Union.png" alt="Union Image" class="union-image">
+    <footer style="overflow-y: scroll;">
+        <div class="footer-section">
+            <img src="Union (1).png" alt="union png" style="margin-left: 85px;">
+            <pre style="margin-left: 30px;">
+        The clothing
+        brand for cats 
+        with hats.
+            </pre>
+        </div>
+        <div class="footer-section">
+            <h3 style="position: relative; bottom: 195px;">
+                North America
+            </h3>
+            <a href="mailto:catclothingemail@gmail.com" style=" color:#F9F1E9; underline; margin-left: 400px; position: relative; bottom: 200px;">catclothingemail@gmail.com</a>
+            <pre style=" margin-left: 270px; position: relative; bottom: 200px">
+                +1 (555) 123-4567
+        
+                123 Main Street
+                Cityville, CA 90210
+                United States
+            </pre>
+            <span class="see-on-map"><a href="#" class="map-link" style=" margin-left: 400px; position: relative; bottom: 150px">See on Map</a></span>
+        </div>
+        <div class="footer-section">
+            <h4 style=" margin-left: 770px; position: relative; bottom: 615px">
+                South America
+            </h4>
+            <a href="mailto:catclothingemail@gmail.com" style="color:#F9F1E9; text-decoration: underline; margin-left: 770px; position: relative; bottom: 625px">catclothingemail@gmail.com</a>
+            <pre style=" margin-left: 640px; position: relative; bottom: 630px">
+                +55 123 456 7890
+
+                456 Rio Avenue
+                Sambatown, SA 12345
+                Brazil
+            </pre>
+            <span class="see-on-map" style=" margin-left: 770px; position: relative; bottom: 580px"><a href="#" class="map-link">See on Map</a></span>    
+        </div>
+        <div class="footer-section">
+            <h5 style=" margin-left: 1200px; position: relative; bottom: 1055px">
+                Our Socials
+            </h5>
+            <img src="Group 6.png" alt="" style=" margin-left: 1200px; position: relative; bottom: 1055px;" >
+            <img src="Group 7.png" alt="" style=" margin-left: 1270px; position: relative; bottom: 1055px;">
+            <img src="Group 8.png" alt="" style=" margin-left: 1200px; position: relative; bottom: 1117px;">
+            <img src="Group 9.png" alt="" style=" margin-left: 1270px; position: relative; bottom: 1250px;">
+            <img src="Group 10 (1).png" alt="" style=" margin-left: 1340px; position: relative; bottom: 1315px;">
+            <!-- Add your social media links here -->
+        </div>
+        <div class="footer-done"></div>
+        <p style="background-color: #FFD5A5; color: #392A2A; text-align: center; position: relative; bottom: 970px;">
+            Crafted with perfection, absolutely zero flaws, and an absurd level of finesse that breaks the space-time continuum by
+            <a href="https://favesolution.com/"  style=" color: inherit;">FAVE Solution</a>
+        </p>
+    </footer>
+</html>
+</body>
+</html>
