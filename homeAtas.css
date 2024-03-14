@@ -10,9 +10,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* background-color: var(--primary); */
+}
+
+body{
+    background-color: var(--primary);
+}
+.men,
+.women,
+.text{
     background-color: var(--primary);
 }
 
+/* LOADING PAGE */
 .loader{
     position: fixed;
     top: 0;
@@ -37,6 +47,7 @@
     }
 }
 
+/* ------------------------------- */
 header{
     position: fixed;
     top: 0;
@@ -48,6 +59,7 @@ header{
     padding: 10px 20px;
     box-sizing: border-box;
     transition: 0.5s;
+    background-color: var(--primary);
 }
 
 .logo{
@@ -62,7 +74,7 @@ header nav a{
     /* justify-content: space-between; */
 }
 
-a{
+header a{
     color: var(--font);
     font: var(--font);
     font-size: 20px;
@@ -136,6 +148,10 @@ a:hover{
     display: flex;
     margin: 10% 50%;
 }
+.arrow2{
+    display: flex;
+    margin: 5% 50%;
+}
 
 .gender{
     display: flex;
@@ -208,7 +224,7 @@ button text{
     padding: 20px 4px 20px 50px;
     font-family: Noto Serif;
     font-weight: 400;
-    font-size: 42px;
+    font-size: 40px;
 }
 
 .img{
@@ -225,8 +241,7 @@ button text{
 .content{
     display: flex;
     justify-content: space-evenly;
-
-
+    margin-bottom: 3%;
 }
 
 .words{
@@ -249,6 +264,10 @@ button text{
     color: #CC2A06;
     font-weight: 400;
 }
+.diskon2{
+    color: var(--font);
+    font-weight: 400;
+}
 .color{
     width: 75px;
     height: auto;
@@ -260,4 +279,85 @@ button text{
     height: auto;
     padding: 10px 50px;
 }
+/* ------------------------------- */
 
+/* FOOTER */
+footer{
+    background-color: var(--font);
+}
+
+.logoFooter{
+    margin: 5% 5% 2% 5%;
+}
+
+.row{
+    color: var(--primary);
+    font-family: Noto Serif;
+    margin: 0 5% 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.slog{
+    font-size: 44px;
+    font-weight: 400;
+}
+.footer-col h4{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+    font-size: 44px;
+    font-weight: 400;
+}
+.email a{
+    color: var(--primary);
+    font-family: archivo;
+}
+.num{
+    width: fit-content;
+    margin: 20px 0;
+}
+.info h3{
+    width: fit-content;
+    margin: 70px 0 100px 0;
+}
+.info{
+    font-family: archivo;
+    font-size: 16px;
+}
+.info a{
+    color: var(--primary);
+    font-family: archivo;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.i{
+    width: 30%;
+    padding: 0 40px 30px 10px;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+    
+}
+.i:hover{
+    filter: drop-shadow(5px 5px 20px gold);
+ 
+}
+
+.credit{
+    background-color: #FFD5A5;
+    color: #392A2A;
+    text-align: center;
+    font-family: Archivo;
+    font-size: 10px;
+    padding: 6px;
+}
+.credit h2{
+    font-weight: 500;
+    background-color: #FFD5A5;
+}
+.credit h2 span{
+    font-weight: 700;
+    background-color: #FFD5A5;
+}
