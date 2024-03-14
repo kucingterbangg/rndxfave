@@ -127,8 +127,7 @@ body{
 }
 
 .destination h3{
-    color: var(--font);
-    opacity: 70%;
+    color: rgb(102, 90, 65);
     font-size: 18px;
     font-weight: 400;
 }
