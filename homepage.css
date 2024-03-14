@@ -10,7 +10,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background-color: var(--primary); */
 }
 
 body{
@@ -342,7 +341,6 @@ footer{
 }
 .i:hover{
     filter: drop-shadow(5px 5px 20px gold);
- 
 }
 
 .credit{
